@@ -1,0 +1,24 @@
+# Eve McGivern
+
+> Eve McGivern (she/her) is an application governance manager based in Austin, TX, working on global IT application governance at Las Vegas Sands. Her focus is workflows for AI-assisted work: control gates, lifecycle loops, and human-in-the-loop design.
+
+Background in development, analysis, and art. Currently building toward formal architecture ownership: data models, lineage, control gates, and evaluation harnesses. Open to collaborating on agentic workflow design, AI governance tooling, and work where the interesting question is where the human stays in the loop.
+
+## Personal
+
+- [GitHub](https://github.com/evemcgivern): Eve McGivern's GitHub profile
+- [Portfolio](https://evemcgivern.notion.site/Eve-McGivern-18b0507d1fce80739005ff51f4e0198f): portfolio on Notion
+- [Brainwashed](https://www.brainwashed.com): music publication where Eve writes about music
+
+## Work
+
+- [app-governance-kit](https://evemcgivern.github.io/app-governance-kit/): Seven application-governance methods (portfolio, AI, and access) for Claude, Codex, and Copilot, mapped to ISO/IEC 19770, COBIT 2019, ISO/IEC 27001, and ISO/IEC 42001. Includes a public reference site and hands-on practicum exercises.
+
+## Side projects (built with Stylus Nexus)
+
+- [CritForge](https://www.getcritforge.com/): An AI dungeon master assistant for D&D 5e that generates SRD-compliant NPCs, plots, and encounters.
+- [agent-plugins](https://github.com/stylusnexus/agent-plugins): MIT-licensed skill packs for Claude Code, Codex, and about 70 other coding agents, covering shipping, reviews, hardening, releases, product strategy, and go-to-market.
+- [startup-plan](https://github.com/stylusnexus/startup-plan): A practical playbook covering the loop, past failures, and where to fork or install. Consolidates Shipping with Agents and Testing with Agents.
+- [music-coach](https://github.com/stylusnexus/music-coach): Learn to make music on a Mac, and learn GarageBand along the way. No instrument needed.
+- [Soundstellation](https://trees.soundstellation.com): Interactive, source-backed music scene family trees.
+- [Stylus Nexus](https://stylusnexus.github.io): everything else shipped at Stylus Nexus.

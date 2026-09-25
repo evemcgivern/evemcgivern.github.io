@@ -176,8 +176,9 @@ footer {
       <li><a href="https://github.com/evemcgivern">GitHub</a></li>
       <li><a href="https://evemcgivern.notion.site/Eve-McGivern-18b0507d1fce80739005ff51f4e0198f">Portfolio</a></li>
       <li><a href="https://www.brainwashed.com">Brainwashed (music writing)</a></li>
-      <li><a href="mailto:evemcgivern@gmail.com">Email</a></li>
+      <li><span id="contact-email">Email</span></li>
     </ul>
+    <noscript><p class="meta-line">Email: evemcgivern at gmail dot com</p></noscript>
   </section>
 
   <section aria-labelledby="work-heading">
@@ -217,5 +218,17 @@ footer {
     <p>Open to collaborating on agentic workflow design, AI governance tooling, and anything where the interesting question is where the human stays in the loop.</p>
   </footer>
 </main>
+<script>
+(function () {
+  "use strict";
+  var user = "evemcgivern", domain = "gmail.com";
+  var el = document.getElementById("contact-email");
+  if (!el) { return; }
+  var a = document.createElement("a");
+  a.href = "mailto:" + user + "@" + domain;
+  a.textContent = "Email";
+  el.replaceWith(a);
+})();
+</script>
 </body>
 </html>

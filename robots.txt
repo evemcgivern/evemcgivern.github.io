@@ -4,3 +4,4 @@ Allow: /
 Sitemap: https://evemcgivern.github.io/sitemap.xml
 Sitemap: https://evemcgivern.github.io/app-governance-kit/sitemap.xml
 Sitemap: https://evemcgivern.github.io/pour-over/sitemap.xml
+Sitemap: https://evemcgivern.github.io/food-price-story/sitemap.xml

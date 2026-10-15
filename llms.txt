@@ -30,7 +30,7 @@ Systems thinking is the through-line: she maps how applications, data, processes
 
 ## Side projects (built with Stylus Nexus)
 
-- [CritForge](https://www.getcritforge.com/): An AI dungeon master assistant for D&D 5e that generates SRD-compliant NPCs, plots, and encounters.
+- [CritForge](https://www.getcritforge.com/): An AI campaign companion for D&D 5e game masters. It generates NPCs with stat blocks, plots and full modules, encounters, maps, factions, and magic items grounded in the GM's own world, and keeps a Campaign Bible that flags contradictions and exports to virtual tabletops.
 - [agent-plugins](https://github.com/stylusnexus/agent-plugins): MIT-licensed skill packs for Claude Code, Codex, and about 70 other coding agents, covering shipping, reviews, hardening, releases, product strategy, and go-to-market.
 - [startup-plan](https://github.com/stylusnexus/startup-plan): A practical playbook covering the loop, past failures, and where to fork or install. Consolidates Shipping with Agents and Testing with Agents.
 - [music-coach](https://github.com/stylusnexus/music-coach): Learn to make music on a Mac, and learn GarageBand along the way. No instrument needed.

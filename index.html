@@ -78,7 +78,8 @@
   "sameAs": [
     "https://github.com/evemcgivern",
     "https://www.linkedin.com/in/evemcgivern",
-    "https://evemcgivern.notion.site/Eve-McGivern-18b0507d1fce80739005ff51f4e0198f"
+    "https://evemcgivern.notion.site/Eve-McGivern-18b0507d1fce80739005ff51f4e0198f",
+    "https://www.credly.com/users/eve-mcgivern"
   ],
   "alumniOf": {
     "@type": "CollegeOrUniversity",
@@ -165,6 +166,8 @@ main {
 
 .support-bar {
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   justify-content: flex-end;
   margin: -2rem 0 1.5rem;
 }
@@ -400,6 +403,30 @@ h2 {
   }
 }
 
+.subhead {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.earlier {
+  margin: 0 0 1rem;
+  padding-left: 1.1rem;
+  color: var(--muted);
+}
+
+.earlier li {
+  margin: 0.2rem 0;
+}
+
+.earlier strong {
+  color: var(--fg);
+}
+
+.badge-icon {
+  flex: none;
+}
+
 .links {
   list-style: none;
   margin: 0;
@@ -468,7 +495,8 @@ footer p { margin: 0; text-wrap: pretty; }
 </head>
 <body>
 <main id="main">
-  <div class="support-bar"><a class="coffee-link" href="https://buymeacoffee.com/a8w5iiqszp" rel="noopener"><svg class="coffee-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M5 9h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5V9z" fill="#2f9e6e"/><path d="M16 10.5h1.2a2.4 2.4 0 0 1 0 4.8H16" fill="none" stroke="#2f9e6e" stroke-width="1.8" stroke-linecap="round"/><path d="M8.5 3.5c0 1.3 1 1.3 1 2.6M12 3.5c0 1.3 1 1.3 1 2.6" fill="none" stroke="#2f9e6e" stroke-width="1.6" stroke-linecap="round"/></svg><span>Buy me a coffee</span></a></div>
+  <div class="support-bar"><a class="coffee-link" href="https://buymeacoffee.com/a8w5iiqszp" rel="noopener"><svg class="coffee-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M5 9h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5V9z" fill="#2f9e6e"/><path d="M16 10.5h1.2a2.4 2.4 0 0 1 0 4.8H16" fill="none" stroke="#2f9e6e" stroke-width="1.8" stroke-linecap="round"/><path d="M8.5 3.5c0 1.3 1 1.3 1 2.6M12 3.5c0 1.3 1 1.3 1 2.6" fill="none" stroke="#2f9e6e" stroke-width="1.6" stroke-linecap="round"/></svg><span>Buy me a coffee</span></a>
+  <a class="coffee-link" href="https://www.credly.com/users/eve-mcgivern" rel="noopener"><svg class="badge-icon" style="color:var(--accent)" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M12 2.5l8 4.6v9.8l-8 4.6-8-4.6V7.1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.3 12.2l2.5 2.5 4.9-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Credly</span></a></div>
 
   <header class="hero">
     <img class="hero-icon" src="/icon.svg" width="88" height="88" alt="">
@@ -507,6 +535,16 @@ footer p { margin: 0; text-wrap: pretty; }
       <li><span class="when">2011 – 2014</span><span class="what"><strong>Senior Business Systems Analyst, commercial real estate</strong>, PNC</span></li>
       <li><span class="when">2007 – 2011</span><span class="what"><strong>Business Systems Analyst, wealth management</strong>, BNY Mellon</span></li>
     </ol>
+    <h3 class="subhead">Earlier career</h3>
+    <ul class="earlier">
+      <li><strong>Project and Design Manager</strong>, higher education</li>
+      <li><strong>Business Systems Analyst and Developer</strong>, ERP</li>
+      <li><strong>PHP Developer</strong>, arts and media</li>
+      <li><strong>Web Designer</strong>, music and entertainment (Joomla CMS)</li>
+      <li><strong>Usability Specialist</strong>, shipping and logistics</li>
+      <li><strong>ColdFusion Web Developer</strong>, B2B e-commerce</li>
+      <li><strong>Web Designer</strong>, secondary and elementary education</li>
+    </ul>
     <p class="meta-line">Development background: SQL and PL/SQL on Oracle, Python, Informatica, Snowflake, ColdFusion, PHP, and now Next.js and React.</p>
   </section>
 
@@ -546,6 +584,23 @@ footer p { margin: 0; text-wrap: pretty; }
         <p>A cited data story about U.S. grocery prices, income, and food spending. Traces grocery-price growth against personal income since 1970, then compares food-at-home spending across Census regions.</p>
       </a>
     </div>
+  </section>
+
+  <section aria-labelledby="ba-tools-heading">
+    <h2 id="ba-tools-heading">Business analysis tools</h2>
+    <div class="cards">
+      <a class="project-card" href="https://evemcgivern.notion.site/UAT-Strategy-Selector-18b0507d1fce809ab479e048098e06e1">
+        <span class="tag">Excel workbook</span>
+        <h3>UAT Strategy Selector</h3>
+        <p>A checklist that walks through the factors that decide a user acceptance testing strategy: system type, critical functionality, integration, risk level, regulatory compliance, development model, automation, defect handling, and sign-off.</p>
+      </a>
+      <a class="project-card" href="https://evemcgivern.notion.site/API-Requirements-Checklist-User-Story-Generator-18b0507d1fce8027bd23e3738c56b231">
+        <span class="tag">Excel workbook</span>
+        <h3>API Requirements Checklist and User Story Generator</h3>
+        <p>A checklist for drafting API requirements across nine areas, from purpose and scope to security, performance, error handling, versioning, and compliance, with a user story template.</p>
+      </a>
+    </div>
+    <p class="meta-line" style="margin-top:1rem">The workbooks are macro-enabled Excel files (.xlsm), kept up to date on my <a href="https://evemcgivern.notion.site/18b0507d1fce80fb871cd409b26e51da">Notion portfolio</a>. Open a card and download the file from its Notion page.</p>
   </section>
 
   <section aria-labelledby="side-projects-heading">

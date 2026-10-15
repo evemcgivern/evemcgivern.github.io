@@ -427,6 +427,36 @@ h2 {
   flex: none;
 }
 
+.certs {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.certs li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.certs li:last-child {
+  border-bottom: 0;
+}
+
+.certs a,
+.meta-line a {
+  color: var(--accent);
+  text-underline-offset: 0.2em;
+}
+
+.certs span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 .links {
   list-style: none;
   margin: 0;
@@ -546,6 +576,20 @@ footer p { margin: 0; text-wrap: pretty; }
       <li><strong>Web Designer</strong>, secondary and elementary education</li>
     </ul>
     <p class="meta-line">Development background: SQL and PL/SQL on Oracle, Python, Informatica, Snowflake, ColdFusion, PHP, and now Next.js and React.</p>
+  </section>
+
+  <section aria-labelledby="certs-heading">
+    <h2 id="certs-heading">Certifications</h2>
+    <ul class="certs">
+      <li><a href="https://www.credly.com/badges/27a66f2d-8ab7-493e-87f0-ba1e6ceba76e">Certified SAFe 6 Practitioner</a><span>Scaled Agile</span></li>
+      <li><a href="https://www.credly.com/badges/dcf01196-2d6b-4d8c-9d93-e132a325cfaa">Certified SAFe 5 Practitioner</a><span>Scaled Agile</span></li>
+      <li><a href="https://www.credly.com/badges/4b0f0238-50cd-4c3f-a903-07e20dad861b">AWS Certified Cloud Practitioner</a><span>Amazon Web Services</span></li>
+      <li><a href="https://www.credly.com/badges/91b47b64-4efd-4821-aa88-6ddafc5d7605">AWS Certified AI Practitioner</a><span>Amazon Web Services</span></li>
+      <li><a href="https://www.credly.com/users/eve-mcgivern/badges/other">Microsoft Certified: Azure Fundamentals</a><span>Microsoft</span></li>
+      <li><a href="https://www.credly.com/users/eve-mcgivern/badges/other">Microsoft Certified: Azure AI Fundamentals</a><span>Microsoft</span></li>
+      <li>IAPP AIGP<span>in progress</span></li>
+    </ul>
+    <p class="meta-line">Badges are on <a href="https://www.credly.com/users/eve-mcgivern">Credly</a>. Microsoft no longer issues badges through Credly, so the Azure badges appear there as unverified. Microsoft Learn holds the official record.</p>
   </section>
 
   <section aria-labelledby="personal-heading">

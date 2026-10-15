@@ -13,6 +13,7 @@ None. Open `index.html` in a browser.
 ## Architecture
 
 - `index.html`: the page, with canonical and Open Graph metadata in `<head>`.
+- `icon.svg` and `apple-touch-icon.png`: site icon, used as favicon and in the page header.
 - `og-image.png`: Open Graph image referenced from `index.html`.
 - `sitemap.xml`: lists the root URL only.
 - `robots.txt`: allows all; points at this site's sitemap and at `app-governance-kit/sitemap.xml`.

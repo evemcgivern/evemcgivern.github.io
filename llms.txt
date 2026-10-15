@@ -32,7 +32,7 @@ Systems thinking is the through-line: she maps how applications, data, processes
 - [AWS Certified AI Practitioner](https://www.credly.com/badges/91b47b64-4efd-4821-aa88-6ddafc5d7605): Amazon Web Services.
 - [Microsoft Certified: Azure Fundamentals](https://learn.microsoft.com/en-us/users/evemcgivern/credentials/certification/azure-fundamentals): Microsoft, verified on Microsoft Learn.
 - [Microsoft Certified: Azure AI Fundamentals](https://learn.microsoft.com/en-us/users/evemcgivern/credentials/certification/azure-ai-fundamentals): Microsoft, verified on Microsoft Learn. Both also appear on Credly as unverified because Microsoft no longer issues badges through Credly.
-- IAPP AIGP: in progress.
+- Certified Software Asset Manager (CSAM), IAITAM: exam scheduled for November 2026.
 
 ## Personal
 

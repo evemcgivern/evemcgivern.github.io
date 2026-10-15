@@ -21,6 +21,7 @@ Systems thinking is the through-line: she maps how applications, data, processes
 - 2014 to 2019: Senior Business Systems Analyst, enterprise risk and data warehouse, BNY Mellon.
 - 2011 to 2014: Senior Business Systems Analyst, commercial real estate, PNC.
 - 2007 to 2011: Business Systems Analyst, wealth management, BNY Mellon.
+- Earlier career: Project and Design Manager (higher education); Business Systems Analyst and Developer (ERP); PHP Developer (arts and media); Web Designer (music and entertainment, Joomla CMS); Usability Specialist (shipping and logistics); ColdFusion Web Developer (B2B e-commerce); Web Designer (secondary and elementary education).
 - Development background: SQL and PL/SQL on Oracle, Python, Informatica, Snowflake, ColdFusion, PHP, and now Next.js and React.
 
 ## Personal

@@ -6,6 +6,8 @@
 <title>Eve McGivern · Application Governance Manager</title>
 <meta name="description" content="Eve McGivern — application governance manager. Workflows for AI-assisted work: control gates, lifecycle loops, human-in-the-loop design.">
 <meta name="author" content="Eve McGivern">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="canonical" href="https://evemcgivern.github.io/">
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="Eve McGivern">
@@ -141,6 +143,31 @@ main {
   padding: 4rem 1.25rem 4rem;
 }
 
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 0 0 2.25rem;
+}
+
+.hero-icon {
+  flex: none;
+  width: 88px;
+  height: 88px;
+  border-radius: 20px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.12), 0 12px 28px rgba(15, 42, 54, 0.28);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .hero-icon { box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 12px 28px rgba(0, 0, 0, 0.5); }
+}
+
+:root[data-theme="dark"] .hero-icon { box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 12px 28px rgba(0, 0, 0, 0.5); }
+
+@media (max-width: 30rem) {
+  .hero { flex-direction: column; align-items: flex-start; }
+}
+
 h1 {
   font-size: clamp(2.1rem, 6vw, 3rem);
   line-height: 1.1;
@@ -153,7 +180,7 @@ h1 {
   color: var(--muted);
   font-size: 1.1rem;
   text-wrap: balance;
-  margin: 0 0 2.25rem;
+  margin: 0;
 }
 
 .bio { margin: 0 0 3rem; }
@@ -333,8 +360,13 @@ footer p { margin: 0; text-wrap: pretty; }
 </head>
 <body>
 <main id="main">
-  <h1>Eve McGivern</h1>
-  <p class="tagline">Application governance manager · Austin, TX</p>
+  <header class="hero">
+    <img class="hero-icon" src="/icon.svg" width="88" height="88" alt="">
+    <div>
+      <h1>Eve McGivern</h1>
+      <p class="tagline">Application governance manager · Austin, TX</p>
+    </div>
+  </header>
 
   <div class="bio">
     <p>Workflows for AI-assisted work: control gates, lifecycle loops, human-in-the-loop design. Global IT application governance at Las Vegas Sands.</p>

@@ -12,7 +12,7 @@ Background in development, analysis, and art. Currently building toward formal a
 
 ## Work
 
-- [app-governance-kit](https://evemcgivern.github.io/app-governance-kit/): Seven application-governance methods (portfolio, AI, and access) for Claude, Codex, and Copilot, mapped to ISO/IEC 19770, COBIT 2019, ISO/IEC 27001, and ISO/IEC 42001. Includes a public reference site and hands-on practicum exercises.
+- [app-governance-kit](https://evemcgivern.github.io/app-governance-kit/): Seven application-governance methods (portfolio, AI, and access) for Claude, Codex, and Copilot, mapped to ISO/IEC 19770, COBIT 2019, ISO/IEC 27001, and ISO/IEC 42001. Also includes eight SAM templates and checklists, a certification study coach, a router skill, a public reference site, and hands-on practicum exercises.
 
 ## Side projects (built with Stylus Nexus)
 

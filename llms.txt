@@ -1,11 +1,31 @@
 # Eve McGivern
 
-> Eve McGivern (she/her) is an application governance manager based in Austin, TX, working on global IT application governance at Las Vegas Sands. Her focus is workflows for AI-assisted work: control gates, lifecycle loops, and human-in-the-loop design.
+> Eve McGivern (she/her) is a systems thinker based in Austin, TX. She leads global IT application governance at Las Vegas Sands, and works with her partner on Stylus Nexus, the product studio they co-founded to build data and AI-enabled applications. She brings 19 years of business systems analysis and product delivery in regulated financial services and gaming, and designs workflows for AI-assisted work: control gates, lifecycle loops, and human-in-the-loop design.
 
-Background in development, analysis, and art. Currently building toward formal architecture ownership: data models, lineage, control gates, and evaluation harnesses. Open to collaborating on agentic workflow design, AI governance tooling, and work where the interesting question is where the human stays in the loop.
+Systems thinking is the through-line: she maps how applications, data, processes, controls, and people affect one another, then turns ambiguity into requirements, decision models, operating workflows, and roadmaps. Background in development, analysis, and art. Current focus: formal architecture ownership. Open to collaborating on agentic workflow design, AI governance tooling, and work where the interesting question is where the human stays in the loop.
+
+## What she does
+
+- Governance: application registers, rationalization, control gates, and SOX-compliant documentation across a global estate.
+- Analysis and architecture: conceptual and logical data models, data lineage across Python, Informatica, and Snowflake, decision models, and process mapping.
+- Product and delivery: co-founder of Stylus Nexus, working with her partner; product strategy, full-stack builds in Next.js and React, and testing AI models, prompts, and guardrails. Earlier, led an 8 to 13 person team moving a legacy Oracle compensation platform to AWS and Snowflake.
+- AI-assisted workflows: agent control gates, lifecycle loops, and human-in-the-loop design, published as open repositories.
+- Writing: independent music, for Brainwashed.
+
+## Experience
+
+- 2025 to present: Manager, Global IT Application Governance, Las Vegas Sands.
+- 2025 to present: Co-Founder, Product and Technical Strategy, Stylus Nexus.
+- 2020 to 2024: Technology Product, Compensation Cloud Transformation, LPL Financial.
+- 2019 to 2020: Senior Business Consultant, SaaS no-code banking, Temenos.
+- 2014 to 2019: Senior Business Systems Analyst, enterprise risk and data warehouse, BNY Mellon.
+- 2011 to 2014: Senior Business Systems Analyst, commercial real estate, PNC.
+- 2007 to 2011: Business Systems Analyst, wealth management, BNY Mellon.
+- Development background: SQL and PL/SQL on Oracle, Python, Informatica, Snowflake, ColdFusion, PHP, and now Next.js and React.
 
 ## Personal
 
+- [LinkedIn](https://www.linkedin.com/in/evemcgivern): professional profile
 - [GitHub](https://github.com/evemcgivern): Eve McGivern's GitHub profile
 - [Portfolio](https://evemcgivern.notion.site/Eve-McGivern-18b0507d1fce80739005ff51f4e0198f): portfolio on Notion
 - [Brainwashed](https://www.brainwashed.com): music publication where Eve writes about music
@@ -21,7 +41,7 @@ Background in development, analysis, and art. Currently building toward formal a
 
 ## Side projects (built with Stylus Nexus)
 
-- [CritForge](https://www.getcritforge.com/): An AI dungeon master assistant for D&D 5e that generates SRD-compliant NPCs, plots, and encounters.
+- [CritForge](https://www.getcritforge.com/): An AI campaign companion for D&D 5e game masters. It generates NPCs with stat blocks, plots and full modules, encounters, maps, factions, and magic items grounded in the GM's own world, and keeps a Campaign Bible that flags contradictions and exports to virtual tabletops.
 - [agent-plugins](https://github.com/stylusnexus/agent-plugins): MIT-licensed skill packs for Claude Code, Codex, and about 70 other coding agents, covering shipping, reviews, hardening, releases, product strategy, and go-to-market.
 - [startup-plan](https://github.com/stylusnexus/startup-plan): A practical playbook covering the loop, past failures, and where to fork or install. Consolidates Shipping with Agents and Testing with Agents.
 - [music-coach](https://github.com/stylusnexus/music-coach): Learn to make music on a Mac, and learn GarageBand along the way. No instrument needed.

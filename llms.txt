@@ -14,6 +14,11 @@ Background in development, analysis, and art. Currently building toward formal a
 
 - [app-governance-kit](https://evemcgivern.github.io/app-governance-kit/): Seven application-governance methods (portfolio, AI, and access) for Claude, Codex, and Copilot, mapped to ISO/IEC 19770, COBIT 2019, ISO/IEC 27001, and ISO/IEC 42001. Also includes eight SAM templates and checklists, a certification study coach, a router skill, a public reference site, and hands-on practicum exercises.
 
+## New projects
+
+- [Live Brew](https://evemcgivern.github.io/pour-over/): A free pour-over coffee ratio calculator. Static, works offline, no accounts, no analytics.
+- [The Grocery Gap](https://evemcgivern.github.io/food-price-story/): A cited data story about U.S. grocery prices, income, and food spending. Traces grocery-price growth against personal income since 1970 and compares food-at-home spending across Census regions.
+
 ## Side projects (built with Stylus Nexus)
 
 - [CritForge](https://www.getcritforge.com/): An AI dungeon master assistant for D&D 5e that generates SRD-compliant NPCs, plots, and encounters.

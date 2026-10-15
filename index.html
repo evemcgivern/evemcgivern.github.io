@@ -75,6 +75,10 @@
   --accent-fg: #ffffff;
   --focus: #1f4c5e;
   --chip-bg: #eef3f5;
+  --glow: rgba(31, 76, 94, 0.10);
+  --shadow: 0 0 0 1px rgba(26, 33, 43, 0.06), 0 1px 2px rgba(26, 33, 43, 0.05), 0 4px 12px rgba(26, 33, 43, 0.05);
+  --shadow-hover: 0 0 0 1px rgba(26, 33, 43, 0.08), 0 2px 4px rgba(26, 33, 43, 0.06), 0 10px 24px rgba(26, 33, 43, 0.09);
+  --ease: cubic-bezier(0.2, 0, 0, 1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -88,6 +92,9 @@
     --accent-fg: #0c1720;
     --focus: #9fd4e8;
     --chip-bg: #1e2a33;
+    --glow: rgba(127, 194, 221, 0.10);
+    --shadow: 0 0 0 1px rgba(255, 255, 255, 0.07), 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.25);
+    --shadow-hover: 0 0 0 1px rgba(255, 255, 255, 0.12), 0 2px 4px rgba(0, 0, 0, 0.35), 0 10px 24px rgba(0, 0, 0, 0.4);
   }
 }
 
@@ -101,16 +108,26 @@
   --accent-fg: #0c1720;
   --focus: #9fd4e8;
   --chip-bg: #1e2a33;
+  --glow: rgba(127, 194, 221, 0.10);
+  --shadow: 0 0 0 1px rgba(255, 255, 255, 0.07), 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-hover: 0 0 0 1px rgba(255, 255, 255, 0.12), 0 2px 4px rgba(0, 0, 0, 0.35), 0 10px 24px rgba(0, 0, 0, 0.4);
 }
 
 * { box-sizing: border-box; }
 
+html { -webkit-text-size-adjust: 100%; }
+
 body {
   margin: 0;
-  background: var(--bg);
+  background:
+    radial-gradient(60rem 24rem at 50% -8rem, var(--glow), transparent 70%),
+    var(--bg);
+  background-repeat: no-repeat;
   color: var(--fg);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.55;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 :focus-visible {
@@ -119,28 +136,31 @@ body {
 }
 
 main {
-  max-width: 40rem;
+  max-width: 42rem;
   margin: 0 auto;
-  padding: 3rem 1.25rem 4rem;
+  padding: 4rem 1.25rem 4rem;
 }
 
 h1 {
-  font-size: clamp(1.8rem, 5vw, 2.4rem);
-  margin: 0 0 0.5rem;
+  font-size: clamp(2.1rem, 6vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  margin: 0 0 0.6rem;
 }
 
 .tagline {
   color: var(--muted);
   font-size: 1.1rem;
-  margin: 0 0 2rem;
+  text-wrap: balance;
+  margin: 0 0 2.25rem;
 }
 
-.bio {
-  margin: 0 0 2.5rem;
-}
+.bio { margin: 0 0 3rem; }
 
 .bio p {
   margin: 0 0 1rem;
+  text-wrap: pretty;
 }
 
 .meta-line {
@@ -148,43 +168,101 @@ h1 {
   font-size: 0.9rem;
 }
 
-section {
-  margin: 0 0 2.5rem;
-}
+section { margin: 0 0 3rem; }
 
 h2 {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.08em;
   color: var(--muted);
   margin: 0 0 1rem;
 }
 
-.project-card {
-  display: block;
-  padding: 1.25rem;
-  border: 1px solid var(--border);
-  border-radius: 0.5rem;
-  background: var(--surface);
-  text-decoration: none;
-  color: inherit;
-  transition: filter 0.15s ease;
+.cards {
+  display: grid;
+  gap: 0.75rem;
 }
 
-.project-card:hover,
+
+.project-card {
+  display: block;
+  padding: 1.25rem 1.35rem;
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: inherit;
+  transition-property: box-shadow, translate, scale;
+  transition-duration: 0.2s;
+  transition-timing-function: var(--ease);
+}
+
+.project-card:hover {
+  box-shadow: var(--shadow-hover);
+  translate: 0 -2px;
+}
+
 .project-card:focus-visible {
-  filter: brightness(1.05);
+  box-shadow: var(--shadow-hover);
+}
+
+.project-card:active {
+  scale: 0.96;
+  translate: 0 0;
 }
 
 .project-card h3 {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
   margin: 0 0 0.4rem;
   color: var(--accent);
   font-size: 1.15rem;
+  letter-spacing: -0.005em;
+}
+
+.project-card h3::after {
+  content: "\2197";
+  font-weight: 400;
+  opacity: 0;
+  translate: -4px 4px;
+  transition-property: opacity, translate;
+  transition-duration: 0.2s;
+  transition-timing-function: var(--ease);
+}
+
+.project-card:hover h3::after,
+.project-card:focus-visible h3::after {
+  opacity: 0.7;
+  translate: 0 0;
 }
 
 .project-card p {
   margin: 0;
   color: var(--muted);
+  text-wrap: pretty;
+}
+
+.project-card.featured {
+  padding: 1.6rem 1.5rem;
+  background: linear-gradient(160deg, var(--chip-bg), var(--surface) 70%);
+}
+
+.project-card.featured h3 { font-size: 1.4rem; }
+.project-card.featured p { font-size: 1.02rem; }
+
+.tag {
+  display: inline-block;
+  margin: 0 0 0.6rem;
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  background: var(--chip-bg);
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .links {
@@ -197,24 +275,59 @@ h2 {
 }
 
 .links a {
-  display: inline-block;
-  padding: 0.4rem 0.9rem;
-  border: 1px solid var(--accent);
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 1rem;
   border-radius: 999px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
   color: var(--accent);
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 600;
+  transition-property: box-shadow, scale;
+  transition-duration: 0.2s;
+  transition-timing-function: var(--ease);
 }
 
-.links a:hover,
-.links a:focus-visible {
-  filter: brightness(1.08);
+.links a:hover { box-shadow: var(--shadow-hover); }
+.links a:active { scale: 0.96; }
+
+.meta-line a {
+  color: var(--accent);
+  text-underline-offset: 0.2em;
 }
 
 footer {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
   color: var(--muted);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
+}
+
+footer p { margin: 0; text-wrap: pretty; }
+
+@keyframes rise {
+  from { opacity: 0; translate: 0 8px; filter: blur(4px); }
+  to { opacity: 1; translate: 0 0; filter: blur(0); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  main > * {
+    animation: rise 0.5s var(--ease) both;
+  }
+  main > :nth-child(2) { animation-delay: 0.07s; }
+  main > :nth-child(3) { animation-delay: 0.14s; }
+  main > :nth-child(4) { animation-delay: 0.21s; }
+  main > :nth-child(5) { animation-delay: 0.28s; }
+  main > :nth-child(6) { animation-delay: 0.35s; }
+  main > :nth-child(7) { animation-delay: 0.42s; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card, .links a, .project-card h3::after { transition: none; }
+  .project-card:hover { translate: none; }
 }
 </style>
 </head>
@@ -242,35 +355,55 @@ footer {
 
   <section aria-labelledby="work-heading">
     <h2 id="work-heading">Work</h2>
-    <a class="project-card" href="https://evemcgivern.github.io/app-governance-kit/">
-      <h3>app-governance-kit</h3>
-      <p>Seven application-governance methods — portfolio, AI, and access — for Claude, Codex, and Copilot, mapped to ISO/IEC 19770, COBIT 2019, ISO/IEC 27001, and ISO/IEC 42001. Also includes eight SAM templates and checklists, a certification study coach, a router skill, a public reference site, and hands-on practicum exercises.</p>
-    </a>
+    <div class="cards">
+      <a class="project-card" href="https://evemcgivern.github.io/app-governance-kit/">
+        <h3>app-governance-kit</h3>
+        <p>Seven application-governance methods — portfolio, AI, and access — for Claude, Codex, and Copilot, mapped to ISO/IEC 19770, COBIT 2019, ISO/IEC 27001, and ISO/IEC 42001. Also includes eight SAM templates and checklists, a certification study coach, a router skill, a public reference site, and hands-on practicum exercises.</p>
+      </a>
+    </div>
+  </section>
+
+  <section aria-labelledby="own-projects-heading">
+    <h2 id="own-projects-heading">New Projects</h2>
+    <div class="cards">
+      <a class="project-card featured" href="https://evemcgivern.github.io/pour-over/">
+        <span class="tag">Featured · Tool</span>
+        <h3>Live Brew</h3>
+        <p>A free pour-over coffee ratio calculator. Enter coffee, brew water, or mug size and get the rest at 1:14 to 1:18. Static, works offline, no accounts, no analytics.</p>
+      </a>
+      <a class="project-card" href="https://evemcgivern.github.io/food-price-story/">
+        <span class="tag">Data story</span>
+        <h3>The Grocery Gap</h3>
+        <p>A cited data story about U.S. grocery prices, income, and food spending. Traces grocery-price growth against personal income since 1970, then compares food-at-home spending across Census regions.</p>
+      </a>
+    </div>
   </section>
 
   <section aria-labelledby="side-projects-heading">
     <h2 id="side-projects-heading">Side Projects</h2>
-    <a class="project-card" href="https://www.getcritforge.com/">
-      <h3>CritForge</h3>
-      <p>An AI dungeon master assistant for D&amp;D 5e — SRD-compliant NPCs, plots, and encounters, generated instantly. We built it at Stylus Nexus.</p>
-    </a>
-    <a class="project-card" href="https://stylusnexus.github.io/agent-plugins/">
-      <h3>agent-plugins</h3>
-      <p>Skill packs for Claude Code, Codex, and ~70 other coding agents: shipping, reviews, hardening, releases, product strategy, and go-to-market. MIT.</p>
-    </a>
-    <a class="project-card" href="https://stylusnexus.github.io/startup-plan/">
-      <h3>startup-plan</h3>
-      <p>The practical playbook: the loop, the failures we already made, and where to fork or install. Consolidates Shipping with Agents and Testing with Agents.</p>
-    </a>
-    <a class="project-card" href="https://stylusnexus.github.io/music-coach/">
-      <h3>music-coach</h3>
-      <p>Learn to make music on your Mac, and learn GarageBand while you do it. No instrument needed.</p>
-    </a>
-    <a class="project-card" href="https://trees.soundstellation.com">
-      <h3>Soundstellation</h3>
-      <p>Interactive, source-backed music scene family trees.</p>
-    </a>
-    <p class="meta-line">See everything else we've shipped at Stylus Nexus: <a href="https://stylusnexus.github.io">stylusnexus.github.io</a>.</p>
+    <div class="cards">
+      <a class="project-card" href="https://www.getcritforge.com/">
+        <h3>CritForge</h3>
+        <p>An AI dungeon master assistant for D&amp;D 5e — SRD-compliant NPCs, plots, and encounters, generated instantly. We built it at Stylus Nexus.</p>
+      </a>
+      <a class="project-card" href="https://stylusnexus.github.io/agent-plugins/">
+        <h3>agent-plugins</h3>
+        <p>Skill packs for Claude Code, Codex, and ~70 other coding agents: shipping, reviews, hardening, releases, product strategy, and go-to-market. MIT.</p>
+      </a>
+      <a class="project-card" href="https://stylusnexus.github.io/startup-plan/">
+        <h3>startup-plan</h3>
+        <p>The practical playbook: the loop, the failures we already made, and where to fork or install. Consolidates Shipping with Agents and Testing with Agents.</p>
+      </a>
+      <a class="project-card" href="https://stylusnexus.github.io/music-coach/">
+        <h3>music-coach</h3>
+        <p>Learn to make music on your Mac, and learn GarageBand while you do it. No instrument needed.</p>
+      </a>
+      <a class="project-card" href="https://trees.soundstellation.com">
+        <h3>Soundstellation</h3>
+        <p>Interactive, source-backed music scene family trees.</p>
+      </a>
+    </div>
+    <p class="meta-line" style="margin-top:1rem">See everything else we've shipped at Stylus Nexus: <a href="https://stylusnexus.github.io">stylusnexus.github.io</a>.</p>
   </section>
 
   <footer>

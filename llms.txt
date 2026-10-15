@@ -1,11 +1,20 @@
 # Eve McGivern
 
-> Eve McGivern (she/her) is an application governance manager based in Austin, TX, working on global IT application governance at Las Vegas Sands. Her focus is workflows for AI-assisted work: control gates, lifecycle loops, and human-in-the-loop design.
+> Eve McGivern (she/her) is a systems thinker based in Austin, TX. She leads global IT application governance at Las Vegas Sands and co-founded Stylus Nexus, a product studio building data and AI-enabled applications. She brings 19 years of business systems analysis and product delivery in regulated financial services and gaming, and designs workflows for AI-assisted work: control gates, lifecycle loops, and human-in-the-loop design.
 
-Background in development, analysis, and art. Currently building toward formal architecture ownership: data models, lineage, control gates, and evaluation harnesses. Open to collaborating on agentic workflow design, AI governance tooling, and work where the interesting question is where the human stays in the loop.
+Systems thinking is the through-line: she maps how applications, data, processes, controls, and people affect one another, then turns ambiguity into requirements, decision models, operating workflows, and roadmaps. Background in development, analysis, and art. Current focus: formal architecture ownership. Open to collaborating on agentic workflow design, AI governance tooling, and work where the interesting question is where the human stays in the loop.
+
+## What she does
+
+- Governance: application registers, rationalization, control gates, and SOX-compliant documentation across a global estate.
+- Analysis and architecture: conceptual and logical data models, data lineage across Python, Informatica, and Snowflake, decision models, and process mapping.
+- Product and delivery: co-founder of Stylus Nexus; product strategy, full-stack builds in Next.js and React, and testing AI models, prompts, and guardrails. Earlier, led an 8 to 13 person team moving a legacy Oracle compensation platform to AWS and Snowflake.
+- AI-assisted workflows: agent control gates, lifecycle loops, and human-in-the-loop design, published as open repositories.
+- Writing: independent music, for Brainwashed.
 
 ## Personal
 
+- [LinkedIn](https://www.linkedin.com/in/evemcgivern): professional profile
 - [GitHub](https://github.com/evemcgivern): Eve McGivern's GitHub profile
 - [Portfolio](https://evemcgivern.notion.site/Eve-McGivern-18b0507d1fce80739005ff51f4e0198f): portfolio on Notion
 - [Brainwashed](https://www.brainwashed.com): music publication where Eve writes about music

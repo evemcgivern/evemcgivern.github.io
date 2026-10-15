@@ -366,6 +366,40 @@ h2 {
   text-wrap: pretty;
 }
 
+.timeline {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.timeline li {
+  display: grid;
+  grid-template-columns: 8.5rem minmax(0, 1fr);
+  gap: 0.25rem 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.timeline li:last-child {
+  border-bottom: 0;
+}
+
+.timeline .when {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.timeline strong {
+  color: var(--fg);
+}
+
+@media (max-width: 30rem) {
+  .timeline li {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .links {
   list-style: none;
   margin: 0;
@@ -460,6 +494,20 @@ footer p { margin: 0; text-wrap: pretty; }
       <div><dt>AI-assisted workflows</dt><dd>Agent control gates, lifecycle loops, and human-in-the-loop design, published as open repositories.</dd></div>
       <div><dt>Writing</dt><dd>I write about independent music for Brainwashed.</dd></div>
     </dl>
+  </section>
+
+  <section aria-labelledby="experience-heading">
+    <h2 id="experience-heading">Experience</h2>
+    <ol class="timeline">
+      <li><span class="when">2025 – present</span><span class="what"><strong>Co-Founder, Product and Technical Strategy</strong>, Stylus Nexus</span></li>
+      <li><span class="when">2025 – present</span><span class="what"><strong>Manager, Global IT Application Governance</strong>, Las Vegas Sands</span></li>
+      <li><span class="when">2020 – 2024</span><span class="what"><strong>Technology Product, Compensation Cloud Transformation</strong>, LPL Financial</span></li>
+      <li><span class="when">2019 – 2020</span><span class="what"><strong>Senior Business Consultant, SaaS no-code banking</strong>, Temenos</span></li>
+      <li><span class="when">2014 – 2019</span><span class="what"><strong>Senior Business Systems Analyst, enterprise risk and data warehouse</strong>, BNY Mellon</span></li>
+      <li><span class="when">2011 – 2014</span><span class="what"><strong>Senior Business Systems Analyst, commercial real estate</strong>, PNC</span></li>
+      <li><span class="when">2007 – 2011</span><span class="what"><strong>Business Systems Analyst, wealth management</strong>, BNY Mellon</span></li>
+    </ol>
+    <p class="meta-line">Development background: SQL and PL/SQL on Oracle, Python, Informatica, Snowflake, ColdFusion, PHP, and now Next.js and React.</p>
   </section>
 
   <section aria-labelledby="personal-heading">

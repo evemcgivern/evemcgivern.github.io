@@ -40,6 +40,12 @@ Systems thinking is the through-line: she maps how applications, data, processes
 - [Live Brew](https://evemcgivern.github.io/pour-over/): A free pour-over coffee ratio calculator. Static, works offline, no accounts, no analytics.
 - [The Grocery Gap](https://evemcgivern.github.io/food-price-story/): A cited data story about U.S. grocery prices, income, and food spending. Traces grocery-price growth against personal income since 1970 and compares food-at-home spending across Census regions.
 
+## Business analysis tools
+
+- [UAT Strategy Selector](https://evemcgivern.notion.site/UAT-Strategy-Selector-18b0507d1fce809ab479e048098e06e1): an Excel checklist for choosing a user acceptance testing strategy across factors such as system type, risk level, regulatory compliance, and sign-off. Downloaded from Notion.
+- [API Requirements Checklist and User Story Generator](https://evemcgivern.notion.site/API-Requirements-Checklist-User-Story-Generator-18b0507d1fce8027bd23e3738c56b231): an Excel checklist for drafting API requirements across nine areas, with a user story template. Downloaded from Notion.
+- [More Excel tools on Notion](https://evemcgivern.notion.site/18b0507d1fce80fb871cd409b26e51da): the Fun Projects page, where new tools are added first.
+
 ## Side projects (built with Stylus Nexus)
 
 - [CritForge](https://www.getcritforge.com/): An AI campaign companion for D&D 5e game masters. It generates NPCs with stat blocks, plots and full modules, encounters, maps, factions, and magic items grounded in the GM's own world, and keeps a Campaign Bible that flags contradictions and exports to virtual tabletops.

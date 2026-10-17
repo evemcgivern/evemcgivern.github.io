@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RoleReady Resume Tailor · Eve McGivern</title>
+<meta name="description" content="RoleReady Resume Tailor helps you tailor a resume to a job description using verified source facts, with clear explanations of changes and evidence gaps.">
+<meta name="author" content="Eve McGivern">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://evemcgivern.github.io/role-ready-resume-tailor/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Eve McGivern">
+<meta property="og:url" content="https://evemcgivern.github.io/role-ready-resume-tailor/">
+<meta property="og:title" content="RoleReady Resume Tailor · Eve McGivern">
+<meta property="og:description" content="A ChatGPT plugin for truthful, source-grounded resume tailoring.">
+<meta property="og:image" content="https://evemcgivern.github.io/role-ready-resume-tailor/role-ready-icon.png">
+<meta name="theme-color" content="#f6f7f9">
+<style>
+:root { color-scheme: light dark; --bg:#f6f7f9; --surface:#fff; --fg:#1a212b; --muted:#4d5762; --border:#dde1e6; --accent:#1f4c5e; --accent-soft:#eaf1f3; --gold:#bd8730; --shadow:0 0 0 1px rgba(26,33,43,.05),0 12px 34px rgba(26,33,43,.08); }
+@media (prefers-color-scheme: dark) { :root { --bg:#10151b; --surface:#1a212b; --fg:#e7ebef; --muted:#a7b1bb; --border:#2c3641; --accent:#9fd4e8; --accent-soft:#1e2a33; --gold:#e5bb69; --shadow:0 0 0 1px rgba(255,255,255,.07),0 12px 34px rgba(0,0,0,.24); } }
+* { box-sizing:border-box; }
+html { -webkit-text-size-adjust:100%; }
+body { margin:0; background:var(--bg); color:var(--fg); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.65; }
+a { color:var(--accent); text-underline-offset:.18em; }
+a:focus-visible { outline:3px solid var(--gold); outline-offset:4px; border-radius:3px; }
+.skip { position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
+.skip:focus { left:1rem; top:1rem; width:auto; height:auto; z-index:2; padding:.7rem 1rem; background:var(--surface); }
+.wrap { width:min(100% - 2rem, 1040px); margin-inline:auto; }
+.topbar { display:flex; align-items:center; justify-content:space-between; padding:1.4rem 0; border-bottom:1px solid var(--border); }
+.topbar a { font-size:.94rem; font-weight:650; text-decoration:none; }
+.topbar .home { color:var(--fg); }
+.hero { display:grid; grid-template-columns:minmax(0,1fr) 260px; align-items:center; gap:clamp(2rem,7vw,6rem); padding:clamp(3.5rem,8vw,7rem) 0 4rem; }
+.eyebrow,.tag { color:var(--accent); font-size:.77rem; font-weight:750; letter-spacing:.1em; text-transform:uppercase; }
+h1,h2,h3,p { margin-top:0; }
+h1 { margin-bottom:1.25rem; max-width:700px; font-family:Georgia,"Times New Roman",serif; font-size:clamp(3rem,8vw,6.1rem); line-height:.98; letter-spacing:-.055em; font-weight:500; }
+.lede { max-width:620px; margin-bottom:1.8rem; color:var(--muted); font-size:clamp(1.1rem,2vw,1.3rem); line-height:1.55; }
+.icon-frame { padding:1.15rem; border:1px solid var(--border); border-radius:28px; background:var(--surface); box-shadow:var(--shadow); }
+.icon-frame img { display:block; width:100%; height:auto; border-radius:20px; }
+.button { display:inline-flex; align-items:center; gap:.5rem; padding:.78rem 1.1rem; border-radius:999px; background:var(--accent); color:#fff; font-size:.95rem; font-weight:700; text-decoration:none; }
+@media (prefers-color-scheme:dark) { .button { color:#0c1720; } }
+.button:hover { filter:brightness(1.08); }
+.section { padding:2.3rem 0; border-top:1px solid var(--border); }
+.section h2 { max-width:720px; margin-bottom:.8rem; font-family:Georgia,"Times New Roman",serif; font-size:clamp(1.8rem,4vw,2.7rem); line-height:1.12; font-weight:500; letter-spacing:-.025em; }
+.intro { max-width:720px; color:var(--muted); font-size:1.07rem; }
+.grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; margin-top:1.6rem; }
+.card { padding:1.3rem; border:1px solid var(--border); border-radius:18px; background:var(--surface); }
+.card h3 { margin-bottom:.45rem; font-size:1rem; }
+.card p { margin:0; color:var(--muted); font-size:.94rem; }
+.steps { counter-reset:step; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; margin:1.6rem 0 0; padding:0; list-style:none; }
+.steps li { counter-increment:step; padding-top:1rem; border-top:2px solid var(--accent); }
+.steps li::before { content:"0" counter(step); display:block; margin-bottom:.6rem; color:var(--gold); font-weight:800; letter-spacing:.08em; }
+.steps strong { display:block; margin-bottom:.3rem; }
+.steps span { color:var(--muted); font-size:.94rem; }
+.note { padding:1.3rem 1.4rem; border-left:3px solid var(--gold); background:var(--accent-soft); color:var(--muted); }
+footer { margin-top:3rem; padding:1.5rem 0 2.5rem; border-top:1px solid var(--border); color:var(--muted); font-size:.9rem; }
+@media (max-width:700px) { .hero { grid-template-columns:1fr; gap:2rem; padding-top:3.5rem; } .icon-frame { width:min(100%,220px); order:-1; } .grid,.steps { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+  <nav class="topbar" aria-label="Main navigation">
+    <a class="home" href="/">Eve McGivern</a>
+    <a href="/#own-projects-heading">All projects</a>
+  </nav>
+  <main id="main">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">A ChatGPT plugin · Resume tailoring</p>
+        <h1>RoleReady<br>Resume Tailor</h1>
+        <p class="lede">Shape your resume around the role while keeping every claim grounded in the experience and evidence you provide.</p>
+        <a class="button" href="#use-heading">See how it works <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="icon-frame"><img src="role-ready-icon.png" width="1254" height="1254" alt="RoleReady icon: a threaded needle and flowing teal thread across a resume page"></div>
+    </header>
+
+    <section class="section" aria-labelledby="approach-heading">
+      <p class="tag">The approach</p>
+      <h2 id="approach-heading">A tailored resume should still sound like your work.</h2>
+      <p class="intro">RoleReady Resume Tailor works from your resume and the complete job description. It helps surface the experience that matters for the role, asks questions when details are unclear, and explains the evidence behind suggested changes.</p>
+      <div class="grid">
+        <article class="card"><h3>Keep claims grounded</h3><p>Use only facts supported by the resume and details you confirm. Flag uncertainty instead of filling gaps with invented qualifications.</p></article>
+        <article class="card"><h3>Show the fit</h3><p>Bring relevant achievements and role language into clearer focus while keeping the substance of your experience intact.</p></article>
+        <article class="card"><h3>Explain the edits</h3><p>Review what changed, why it changed, and where the source material supports the wording.</p></article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="use-heading">
+      <p class="tag">How to use it</p>
+      <h2 id="use-heading">Start with the source material.</h2>
+      <ol class="steps">
+        <li><strong>Bring both documents</strong><span>Share your resume and the full job description in your ChatGPT conversation.</span></li>
+        <li><strong>Clarify missing details</strong><span>Answer follow-up questions when a claim needs more evidence or context.</span></li>
+        <li><strong>Review before using</strong><span>Check every fact and edit yourself before sending the resume to an employer.</span></li>
+      </ol>
+    </section>
+
+    <section class="section" aria-labelledby="limits-heading">
+      <p class="tag">Know the limits</p>
+      <h2 id="limits-heading">Useful preparation, not a hiring guarantee.</h2>
+      <p class="note">RoleReady does not promise ATS scores, interviews, or job outcomes. Page count can only be checked when document rendering is available; plain text cannot certify pagination. Export options depend on the tools available in your ChatGPT setup.</p>
+    </section>
+
+  </main>
+  <footer><a href="/">Eve McGivern</a> · RoleReady Resume Tailor</footer>
+</div>
+</body>
+</html>

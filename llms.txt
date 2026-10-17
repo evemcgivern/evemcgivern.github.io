@@ -51,6 +51,9 @@ Systems thinking is the through-line: she maps how applications, data, processes
 
 - [Live Brew](https://evemcgivern.github.io/pour-over/): A free pour-over coffee ratio calculator. Static, works offline, no accounts, no analytics.
 - [RoleReady Resume Tailor](https://evemcgivern.github.io/role-ready-resume-tailor/): Tailor resumes to complete job descriptions using verified source facts. RoleReady asks clarifying questions, explains edits with source evidence, and flags gaps rather than inventing qualifications. It does not promise ATS scores, interviews, or job outcomes; export and page-count checks depend on available ChatGPT tools.
+  - [Support](https://evemcgivern.github.io/role-ready-resume-tailor/support/)
+  - [Privacy notice](https://evemcgivern.github.io/role-ready-resume-tailor/privacy/)
+  - [Terms of use](https://evemcgivern.github.io/role-ready-resume-tailor/terms/)
 - [The Grocery Gap](https://evemcgivern.github.io/food-price-story/): A cited data story about U.S. grocery prices, income, and food spending. Traces grocery-price growth against personal income since 1970 and compares food-at-home spending across Census regions.
 
 ## Business analysis tools

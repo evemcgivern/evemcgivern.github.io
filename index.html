@@ -466,7 +466,8 @@ h2 {
   gap: 0.6rem;
 }
 
-.links a {
+.links a,
+.links button.contact-reveal {
   display: inline-flex;
   align-items: center;
   min-height: 40px;
@@ -483,8 +484,16 @@ h2 {
   transition-timing-function: var(--ease);
 }
 
-.links a:hover { box-shadow: var(--shadow-hover); }
-.links a:active { scale: 0.96; }
+.links button.contact-reveal {
+  border: 0;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.links a:hover,
+.links button.contact-reveal:hover { box-shadow: var(--shadow-hover); }
+.links a:active,
+.links button.contact-reveal:active { scale: 0.96; }
 
 .meta-line a {
   color: var(--accent);
@@ -600,9 +609,12 @@ footer p { margin: 0; text-wrap: pretty; }
       <li><a href="https://github.com/evemcgivern">GitHub</a></li>
       <li><a href="https://evemcgivern.notion.site/Eve-McGivern-18b0507d1fce80739005ff51f4e0198f">Portfolio</a></li>
       <li><a href="https://www.brainwashed.com">Brainwashed (music writing)</a></li>
-      <li><span id="contact-email">Email</span></li>
+      <li>
+        <button class="contact-reveal" id="contact-reveal" type="button" aria-expanded="false" aria-controls="contact-email-output">Show email</button>
+        <span id="contact-email-output" aria-live="polite"></span>
+      </li>
     </ul>
-    <noscript><p class="meta-line">Email: evemcgivern at gmail dot com</p></noscript>
+    <noscript><p class="meta-line">Email contact requires JavaScript to reveal the address.</p></noscript>
   </section>
 
   <section aria-labelledby="work-heading">
@@ -687,13 +699,25 @@ footer p { margin: 0; text-wrap: pretty; }
 <script>
 (function () {
   "use strict";
-  var user = "evemcgivern", domain = "gmail.com";
-  var el = document.getElementById("contact-email");
-  if (!el) { return; }
-  var a = document.createElement("a");
-  a.href = "mailto:" + user + "@" + domain;
-  a.textContent = "Email";
-  el.replaceWith(a);
+  var button = document.getElementById("contact-reveal");
+  var output = document.getElementById("contact-email-output");
+  if (!button || !output) { return; }
+  button.addEventListener("click", function () {
+    var expanded = button.getAttribute("aria-expanded") === "true";
+    if (expanded) {
+      output.replaceChildren();
+      button.textContent = "Show email";
+      button.setAttribute("aria-expanded", "false");
+      return;
+    }
+    var address = String.fromCharCode(101,118,101,109,99,103,105,118,101,114,110,64,103,109,97,105,108,46,99,111,109);
+    var link = document.createElement("a");
+    link.href = "mailto:" + address;
+    link.textContent = address;
+    output.replaceChildren(link);
+    button.textContent = "Hide email";
+    button.setAttribute("aria-expanded", "true");
+  });
 })();
 </script>
 </body>

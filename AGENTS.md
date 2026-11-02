@@ -16,7 +16,7 @@ None. Open `index.html` in a browser.
 - `icon.svg` and `apple-touch-icon.png`: site icon, used as favicon and in the page header.
 - `og-image.png`: Open Graph image referenced from `index.html`.
 - `sitemap.xml`: lists the root URL only.
-- `robots.txt`: allows all; points at this site's sitemap and at `app-governance-kit/sitemap.xml`.
+- `robots.txt`: allows all; points at this site's sitemap and at the project sitemaps (`app-governance-kit`, `software-lifecycle` and others served from other repositories).
 - `llms.txt`: plain-text summary and link list for AI crawlers.
 
 ## Common Gotchas

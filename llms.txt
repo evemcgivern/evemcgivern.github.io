@@ -46,6 +46,14 @@ Systems thinking is the through-line: she maps how applications, data, processes
 ## Work
 
 - [app-governance-kit](https://evemcgivern.github.io/app-governance-kit/): Seven application-governance methods (portfolio, AI, and access) for Claude, Codex, and Copilot, mapped to ISO/IEC 19770, COBIT 2019, ISO/IEC 27001, and ISO/IEC 42001. Also includes eight SAM templates and checklists, a certification study coach, a router skill, a public reference site, and hands-on practicum exercises.
+- [software-lifecycle](https://evemcgivern.github.io/software-lifecycle/): Offline Python tool that checks a software inventory export against end-of-life dates and flags items past or near end of life, with a CISA KEV needs-review flag. Standard library only. Runs locally with no network by default; not independently assessed. An experiment, maintained as time allows.
+  - [Start](https://evemcgivern.github.io/software-lifecycle/start.html): who it is for and how to run it
+  - [How to read a report](https://evemcgivern.github.io/software-lifecycle/reports.html): the lists in a report and what each means
+  - [Privacy, security and limits](https://evemcgivern.github.io/software-lifecycle/privacy.html): the privacy model, what it does not claim, and where it can be wrong
+  - [What is KEV?](https://evemcgivern.github.io/software-lifecycle/kev.html): CISA's Known Exploited Vulnerabilities catalog and how the tool uses it
+  - [What is an SBOM?](https://evemcgivern.github.io/software-lifecycle/sbom.html): software bills of materials, and the tool's own CycloneDX SBOM
+  - [How often is the data updated?](https://evemcgivern.github.io/software-lifecycle/data-updates.html): when the KEV and end-of-life data update, and how
+  - [Source code and docs](https://github.com/evemcgivern/software-lifecycle): MIT-licensed repository
 
 ## New projects
 

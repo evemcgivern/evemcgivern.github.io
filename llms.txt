@@ -32,7 +32,8 @@ Systems thinking is the through-line: she maps how applications, data, processes
 - [AWS Certified AI Practitioner](https://www.credly.com/badges/91b47b64-4efd-4821-aa88-6ddafc5d7605): Amazon Web Services.
 - [Microsoft Certified: Azure Fundamentals](https://learn.microsoft.com/en-us/users/evemcgivern/credentials/certification/azure-fundamentals): Microsoft, verified on Microsoft Learn.
 - [Microsoft Certified: Azure AI Fundamentals](https://learn.microsoft.com/en-us/users/evemcgivern/credentials/certification/azure-ai-fundamentals): Microsoft, verified on Microsoft Learn. Both also appear on Credly as unverified because Microsoft no longer issues badges through Credly.
-- Certified Software Asset Manager (CSAM), IAITAM: exam scheduled for November 2026.
+- Certified Asset Management Professional (CAMP), IAITAM: November 2026.
+- Certified Software Asset Manager (CSAM), IAITAM: November 2026.
 - [Post Graduate Program in Cloud Computing Leveraging Gen AI](https://www.mygreatlearning.com/eportfolio/eve-mcgivern): Great Learning, May 2024 to January 2025; verified academic e-portfolio.
 
 ## Personal
@@ -45,7 +46,7 @@ Systems thinking is the through-line: she maps how applications, data, processes
 
 ## Work
 
-- [app-governance-kit](https://evemcgivern.github.io/app-governance-kit/): Seven application-governance methods (portfolio, AI, and access) for Claude, Codex, and Copilot, mapped to ISO/IEC 19770, COBIT 2019, ISO/IEC 27001, and ISO/IEC 42001. Also includes eight SAM templates and checklists, a certification study coach, a router skill, a public reference site, and hands-on practicum exercises.
+- [app-governance-kit](https://evemcgivern.github.io/app-governance-kit/): Nine application-governance methods (portfolio, AI, and access) for Claude, Codex, and Copilot, mapped to ISO/IEC 19770, COBIT 2019, ISO/IEC 27001, and ISO/IEC 42001. Also includes forty-one SAM templates and checklists, a certification study coach, a router skill, a public reference site, and hands-on practicum exercises.
 - [software-lifecycle](https://evemcgivern.github.io/software-lifecycle/): Offline Python tool that checks a software inventory export against end-of-life dates and flags items past or near end of life, with a CISA KEV needs-review flag. Standard library only. Runs locally with no network by default; not independently assessed. An experiment, maintained as time allows.
   - [Start](https://evemcgivern.github.io/software-lifecycle/start.html): who it is for and how to run it
   - [How to read a report](https://evemcgivern.github.io/software-lifecycle/reports.html): the lists in a report and what each means
